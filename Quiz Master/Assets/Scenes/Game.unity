@@ -225,6 +225,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2455522558617750529, guid: 9cbab8e28cd08354eaf0b0c6c1f5b8f9, type: 3}
   m_PrefabInstance: {fileID: 241427366}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &260868566 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2091124972246263508, guid: 9cbab8e28cd08354eaf0b0c6c1f5b8f9, type: 3}
+  m_PrefabInstance: {fileID: 241427366}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &267679918
 GameObject:
   m_ObjectHideFlags: 0
@@ -622,6 +627,11 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2455522558617750529, guid: 9cbab8e28cd08354eaf0b0c6c1f5b8f9, type: 3}
   m_PrefabInstance: {fileID: 921965568}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1105843742 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2091124972246263508, guid: 9cbab8e28cd08354eaf0b0c6c1f5b8f9, type: 3}
+  m_PrefabInstance: {fileID: 4272966960379053424}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1160825698
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -722,6 +732,11 @@ PrefabInstance:
 --- !u!224 &1160825699 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2455522558617750529, guid: 9cbab8e28cd08354eaf0b0c6c1f5b8f9, type: 3}
+  m_PrefabInstance: {fileID: 1160825698}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1354076434 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2091124972246263508, guid: 9cbab8e28cd08354eaf0b0c6c1f5b8f9, type: 3}
   m_PrefabInstance: {fileID: 1160825698}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1359993596
@@ -1044,6 +1059,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   questionText: {fileID: 350332477}
   question: {fileID: 11400000, guid: c7cb12d70419a0546b93880528c11025, type: 2}
+  answerButtons:
+  - {fileID: 1105843742}
+  - {fileID: 1740890383}
+  - {fileID: 260868566}
+  - {fileID: 1354076434}
+--- !u!1 &1740890383 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2091124972246263508, guid: 9cbab8e28cd08354eaf0b0c6c1f5b8f9, type: 3}
+  m_PrefabInstance: {fileID: 921965568}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1874110056
 GameObject:
   m_ObjectHideFlags: 0
