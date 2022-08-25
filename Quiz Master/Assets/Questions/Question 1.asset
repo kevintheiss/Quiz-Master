@@ -15,3 +15,9 @@ MonoBehaviour:
   question: In the BBC television series Doctor Who, 13 actors so far have portrayed
     the titular Doctor. This is due to an in-universe process upon the death of the
     previous Doctor called _______.
+  answers:
+  - Respawning
+  - Resurrection
+  - Regeneration
+  - Reincarnation
+  correctAnswerIndex: 0
