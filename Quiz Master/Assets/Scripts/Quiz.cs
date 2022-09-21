@@ -6,17 +6,63 @@ using UnityEngine.UI;
 
 public class Quiz : MonoBehaviour
 {
+    [Header("Questions")]
     [SerializeField] TextMeshProUGUI questionText;
     [SerializeField] QuestionSO question;
+
+    [Header("Answers")]
     [SerializeField] GameObject[] answerButtons;
     int correctAnswerIndex;
+    bool hasAnsweredEarly;
+
+    [Header("Buttons")]
     [SerializeField] Sprite defaultAnswerSprite;
     [SerializeField] Sprite correctAnswerSprite;
 
-    // Start is called before the first frame update
+    [Header("Timer")]
+    [SerializeField] Image timerImage;
+    Timer timer;
+
     void Start()
     {
+        timer = FindObjectOfType<Timer>();
         GetNextQuestion();
+    }
+
+    void Update()
+    {
+        timerImage.fillAmount = timer.fillFraction;
+        if(timer.loadNextQuestion)
+        {
+            hasAnsweredEarly = false;
+            GetNextQuestion();
+            timer.loadNextQuestion = false;
+        }
+        else if(!hasAnsweredEarly && !timer.isAnsweringQuestion)
+        {
+            DisplayAnswer(-1);
+            SetButtonState(false);
+        }
+    }
+
+    void DisplayAnswer(int index)
+    {
+        Image buttonImage;
+
+        if (index == question.GetCorrectAnswerIndex())
+        {
+            questionText.text = "Correct!";
+            buttonImage = answerButtons[index].GetComponent<Image>();
+            buttonImage.sprite = correctAnswerSprite;
+        }
+        else
+        {
+            correctAnswerIndex = question.GetCorrectAnswerIndex();
+            string correctAnswer = question.GetAnswer(correctAnswerIndex);
+            questionText.text = "Sorry, the correct answer was:\n" + correctAnswer;
+            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
+            buttonImage.sprite = correctAnswerSprite;
+        }
     }
 
     void GetNextQuestion()
@@ -61,23 +107,9 @@ public class Quiz : MonoBehaviour
 
     public void OnAnswerSelected(int index)
     {
-        Image buttonImage;
-
-        if (index == question.GetCorrectAnswerIndex())
-        {
-            questionText.text = "Correct!";
-            buttonImage = answerButtons[index].GetComponent<Image>();
-            buttonImage.sprite = correctAnswerSprite;
-        }
-        else
-        {
-            correctAnswerIndex = question.GetCorrectAnswerIndex();
-            string correctAnswer = question.GetAnswer(correctAnswerIndex);
-            questionText.text = "Sorry, the correct answer was:\n" + correctAnswer;
-            buttonImage = answerButtons[correctAnswerIndex].GetComponent<Image>();
-            buttonImage.sprite = correctAnswerSprite;
-        }
-
+        hasAnsweredEarly = true;
+        DisplayAnswer(index);
         SetButtonState(false);
+        timer.CancelTimer();
     }
 }
