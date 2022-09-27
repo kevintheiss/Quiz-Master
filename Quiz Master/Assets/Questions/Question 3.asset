@@ -13,3 +13,9 @@ MonoBehaviour:
   m_Name: Question 3
   m_EditorClassIdentifier: 
   question: Which of these is NOT a sub-class in 5th Edition Dungeons & Dragons?
+  answers:
+  - Assassin Rogue
+  - Divine Soul Sorcerer
+  - Grave Domain Cleric
+  - Butcher Barbarian
+  correctAnswerIndex: 3

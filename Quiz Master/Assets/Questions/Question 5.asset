@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: In the Persona series of video games, what phrase is commonly used on
     the first awakening of a character's Persona?
+  answers:
+  - '"We are one"'
+  - '"The contract is sealed"'
+  - '"I am thou, thou art I"'
+  - '"You have been chosen"'
+  correctAnswerIndex: 2

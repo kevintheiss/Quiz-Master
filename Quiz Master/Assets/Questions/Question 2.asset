@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: In his earliest Marvel comics incarnation, Thor had a secret identity.
     What was his name?
+  answers:
+  - Ben Barnes
+  - Donald Blake
+  - Steve Simmons
+  - Richard Drake
+  correctAnswerIndex: 1

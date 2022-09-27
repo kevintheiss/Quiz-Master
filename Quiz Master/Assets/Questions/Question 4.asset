@@ -14,3 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   question: In the grimdark future of Warhammer 40,000, who was the Primarch of the
     Imperial Fists Space Marine Legion?
+  answers:
+  - Rogal Dorn
+  - Vulkan
+  - Ferrus Manus
+  - Leman Russ
+  correctAnswerIndex: 0
